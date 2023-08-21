@@ -6,5 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>斐波拉系数</title>
   </head>
-  <body></body>
+  <body>
+    <script>
+      function findEqual(str1, str2) {
+        let short, long;
+        if (str1.length < str2.length) {
+          short = str1;
+          long = str2;
+        } else {
+          short = str2;
+          long = str1;
+        }
+
+        for (let i = short.length - 1; i >= 0; i--) {
+          for (let j = 0; j < i; j++) {
+            if (long.indexOf(short.slice(j, i + 1)) !== -1) {
+              return short.slice(j, i + 1);
+            }
+          }
+        }
+
+        return '';
+      }
+    </script>
+  </body>
 </html>
