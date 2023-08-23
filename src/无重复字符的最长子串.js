@@ -16,16 +16,11 @@
 //      请注意，你的答案必须是 子串 的长度，"pwke" 是一个子序列，不是子串。
 
 
-
-
-
-
-
 /**
  * @param {string} s
  * @return {number}
  */
-var lengthOfLongestSubstring = function (s) {
+const lengthOfLongestSubstring = function (s) {
 
   if (s.length === 1) return 1
 
@@ -68,8 +63,6 @@ function findEqual(str1, str2) {
     short = str2
     long = str1
   }
-
-
 
   for (let i = short.length - 1; i >= 0; i--) {
 
